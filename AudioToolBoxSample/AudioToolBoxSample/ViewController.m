@@ -9,20 +9,27 @@
 #import "ViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
 
-@interface ViewController ()
+@interface ViewController () {
+    
+    SystemSoundID fanfareSoundId;
+    
+}
+
+@property (nonatomic) SystemSoundID fanfareSoundId;
 
 @end
 
 @implementation ViewController
+
+@synthesize fanfareSoundId;
 
 - (void)viewDidLoad {
 
     [super viewDidLoad];
 
     // fanfare.wav file is downloaded by http://www.ne.jp/asahi/music/myuu/wave/wave.htm
-    SystemSoundID soundId = UINT32_MAX;
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[[NSBundle mainBundle] URLForResource:@"fanfare" withExtension:@"wav"], &soundId);
-    AudioServicesPlaySystemSound(soundId);
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[[NSBundle mainBundle] URLForResource:@"fanfare" withExtension:@"wav"], &fanfareSoundId); // 2
+    AudioServicesPlaySystemSound(fanfareSoundId); // 3
 
 }
 
