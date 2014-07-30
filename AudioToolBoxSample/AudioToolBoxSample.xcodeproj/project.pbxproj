@@ -21,6 +21,8 @@
 		24CF2E49198899EB007960AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CF2E2B198899EB007960AD /* UIKit.framework */; };
 		24CF2E51198899EC007960AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24CF2E4F198899EC007960AD /* InfoPlist.strings */; };
 		24CF2E53198899EC007960AD /* AudioToolBoxSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CF2E52198899EC007960AD /* AudioToolBoxSampleTests.m */; };
+		24CF2E5D19889ADF007960AD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CF2E5C19889ADF007960AD /* AudioToolbox.framework */; };
+		24CF2E601988C2B2007960AD /* fanfare.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24CF2E5F1988C2B2007960AD /* fanfare.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		24CF2E4E198899EC007960AD /* AudioToolBoxSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AudioToolBoxSampleTests-Info.plist"; sourceTree = "<group>"; };
 		24CF2E50198899EC007960AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24CF2E52198899EC007960AD /* AudioToolBoxSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioToolBoxSampleTests.m; sourceTree = "<group>"; };
+		24CF2E5C19889ADF007960AD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		24CF2E5F1988C2B2007960AD /* fanfare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fanfare.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24CF2E5D19889ADF007960AD /* AudioToolbox.framework in Frameworks */,
 				24CF2E2A198899EB007960AD /* CoreGraphics.framework in Frameworks */,
 				24CF2E2C198899EB007960AD /* UIKit.framework in Frameworks */,
 				24CF2E28198899EB007960AD /* Foundation.framework in Frameworks */,
@@ -101,6 +106,7 @@
 		24CF2E26198899EB007960AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24CF2E5C19889ADF007960AD /* AudioToolbox.framework */,
 				24CF2E27198899EB007960AD /* Foundation.framework */,
 				24CF2E29198899EB007960AD /* CoreGraphics.framework */,
 				24CF2E2B198899EB007960AD /* UIKit.framework */,
@@ -114,10 +120,11 @@
 			children = (
 				24CF2E36198899EB007960AD /* AppDelegate.h */,
 				24CF2E37198899EB007960AD /* AppDelegate.m */,
+				24CF2E3F198899EB007960AD /* Images.xcassets */,
 				24CF2E39198899EB007960AD /* Main.storyboard */,
 				24CF2E3C198899EB007960AD /* ViewController.h */,
 				24CF2E3D198899EB007960AD /* ViewController.m */,
-				24CF2E3F198899EB007960AD /* Images.xcassets */,
+				24CF2E5E1988C2B2007960AD /* Resources */,
 				24CF2E2E198899EB007960AD /* Supporting Files */,
 			);
 			path = AudioToolBoxSample;
@@ -150,6 +157,14 @@
 				24CF2E4F198899EC007960AD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24CF2E5E1988C2B2007960AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				24CF2E5F1988C2B2007960AD /* fanfare.wav */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +245,7 @@
 			files = (
 				24CF2E40198899EB007960AD /* Images.xcassets in Resources */,
 				24CF2E32198899EB007960AD /* InfoPlist.strings in Resources */,
+				24CF2E601988C2B2007960AD /* fanfare.wav in Resources */,
 				24CF2E3B198899EB007960AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +472,7 @@
 				24CF2E58198899EC007960AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24CF2E59198899EC007960AD /* Build configuration list for PBXNativeTarget "AudioToolBoxSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +481,7 @@
 				24CF2E5B198899EC007960AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
