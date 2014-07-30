@@ -15,12 +15,16 @@
     
 }
 
+@property (nonatomic, weak) IBOutlet UIButton *stopButton;
 @property (nonatomic) SystemSoundID fanfareSoundId;
+
+- (IBAction)tapButton:(id)sender;
 
 @end
 
 @implementation ViewController
 
+@synthesize stopButton;
 @synthesize fanfareSoundId;
 
 - (void)viewDidLoad {
@@ -31,6 +35,15 @@
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)[[NSBundle mainBundle] URLForResource:@"fanfare" withExtension:@"wav"], &fanfareSoundId); // 2
     AudioServicesPlaySystemSound(fanfareSoundId); // 3
 
+}
+
+- (IBAction)tapButton:(id)sender {
+    
+    if(sender == stopButton) {
+        AudioServicesDisposeSystemSoundID(fanfareSoundId);
+        return;
+    }
+    
 }
 
 @end
